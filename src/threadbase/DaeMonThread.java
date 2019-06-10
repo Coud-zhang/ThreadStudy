@@ -19,7 +19,7 @@ public class DaeMonThread {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				System.out.println("我是守护线程，JVM不需要等待我结束运行");
+				System.out.println("我是守护线程,JVM不需要等待我结束运行");
 			}
 		});
 
