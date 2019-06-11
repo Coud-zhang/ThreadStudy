@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * 2、sleep()方法，暂停线程的执行，调用该方法时，线程不会释放锁
  *
  */
-public class OperationThread {
+public class StopThread {
 
 	public static void main(String[] args) throws InterruptedException {
 
