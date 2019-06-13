@@ -12,6 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * synchronized与Lock的区别三:
  *
  * 某个线程通过调用lockInterruptibly()去获取锁，但是锁长时间被另外线程占用时，该线程可以被打断，synchronized不可以被打断
+ * 打断某个线程时会抛出java.lang.InterruptedException异常
  */
 public class LockInterruptibly {
 
