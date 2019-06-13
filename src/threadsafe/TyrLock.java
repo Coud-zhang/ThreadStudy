@@ -12,6 +12,9 @@ import java.util.concurrent.locks.ReentrantLock;
  * Lock与synchronized的区别2:
  * Lock可以使用tyrLock()方法尝试获取锁，如果不能获取锁可以转去做其他任务，
  * synchronized如果不能获取锁，则进入等待队列一直等待获取锁
+ *
+ *
+ *
  */
 public class TyrLock {
 
