@@ -9,6 +9,8 @@ package threadsafe;
  *
  * 下面这段售票代码，存在10个线程销售100张票，存在重票以及错票的情况
  *
+ *
+ *
  * 1.如何解决：加锁 synchronized  Lock等
  */
 
