@@ -1,6 +1,6 @@
 package CasAndAtomic;
 
-import java.sql.Time;
+
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicStampedReference;
 
@@ -25,18 +25,20 @@ public class AtomicStampedReferenceDemo {
 		new Thread(()->{
 			System.out.println(atomicStampedReference.compareAndSet(100,1,1,2));
 			System.out.println(atomicStampedReference.compareAndSet(1,100,2,3));
-		}).start();
+		},"A").start();
 
 
 
-		//
+
 		try {
 			TimeUnit.SECONDS.sleep(1);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+
+		//在B线程向想要修改将修改写回主内存时，A线程已经将版本号更新到3，B线程版本号低于当前主内存中版本号，故B线程写回数据失败
 		new Thread(()->{
 			System.out.println(atomicStampedReference.compareAndSet(100,200,1,2));
-		}).start();
+		},"B").start();
 	}
 }
